@@ -8,9 +8,10 @@
 'use strict';
 
 var isObject = require('isobject');
-var File = require('vinyl');
 
-module.exports = function toVinyl(template) {
+module.exports = function toVinyl(template, Vinyl) {
+  Vinyl = Vinyl || require('vinyl');
+
   if (!isObject(template)) {
     throw new TypeError('to-vinyl expects an object.');
   }
@@ -19,7 +20,8 @@ module.exports = function toVinyl(template) {
     throw new Error('to-vinyl expects `template.content` to be a string.');
   }
 
-  var file = new File({path: template.path});
+  var file = new Vinyl({path: template.path});
+
   for (var key in template) {
     if (template.hasOwnProperty(key)) {
       file[key] = template[key];
