@@ -35,10 +35,4 @@ describe('to-vinyl', function () {
       toVinyl();
     }).should.throw('to-vinyl expects an object.');
   });
-
-  it('should throw an error when content is not a string:', function () {
-    (function () {
-      toVinyl({content: null});
-    }).should.throw('to-vinyl expects `template.content` to be a string.');
-  });
 });
