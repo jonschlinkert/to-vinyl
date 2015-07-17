@@ -1,23 +1,17 @@
 {
   "name": "to-vinyl",
-  "description": "Convert a Template object to a vinyl file object.",
-  "version": "0.1.2",
+  "description": "Convert an object to a vinyl file object. Safely mixes additional properties onto the file object without overwriting properties added by vinyl.",
+  "version": "0.2.0",
   "homepage": "https://github.com/jonschlinkert/to-vinyl",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/to-vinyl.git"
-  },
+  "author": "Jon Schlinekrt (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/to-vinyl",
   "bugs": {
     "url": "https://github.com/jonschlinkert/to-vinyl/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/to-vinyl/blob/master/LICENSE"
-  },
+  "contributors": [
+    "Brian Woodward, (https://github.com/doowb)"
+  ],
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -29,8 +23,9 @@
     "test": "mocha"
   },
   "dependencies": {
-    "isobject": "^1.0.0",
-    "vinyl": "^0.4.6"
+    "isobject": "^1.0.2",
+    "lazy-cache": "^0.1.0",
+    "vinyl": "^0.5.0"
   },
   "devDependencies": {
     "mocha": "*",
@@ -38,11 +33,17 @@
     "to-template": "^0.1.1"
   },
   "keywords": [
-    "assemble",
     "file",
-    "template",
-    "templateutil",
-    "verb",
+    "object",
     "vinyl"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "to-template",
+        "stream-loader",
+        "src-stream"
+      ]
+    }
+  }
 }
